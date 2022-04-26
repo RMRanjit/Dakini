@@ -3,10 +3,11 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import { ProductsContextProvider } from "../../Services/Product/product.context";
-//import { ProductView } from "../../Views/Products.View";
 import { SettingsView } from "../../Views/Settings.View";
-import { TryOnView } from "../../Views/TryOn.View";
+
+import { HomeNavigator } from "./Home.Navigation";
 import { ProductNavigator } from "./Product.Navigation";
+import { ConfigurationNavigator } from "./Configuration.Navigation";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -15,9 +16,9 @@ export const AppNavigator = () => (
     <NavigationContainer>
       <Tab.Navigator
         initialRouteName="Home"
-        activeColor="#f0edf6"
+        activeColor="#FFF056"
         inactiveColor="#3e2465"
-        barStyle={{ backgroundColor: "#694fad" }}
+        barStyle={{ backgroundColor: "#175851" }}
         //screenOptions={createScreenOptions}
         // tabBarOptions={{
         //   activeTintColor: "tomato",
@@ -26,7 +27,7 @@ export const AppNavigator = () => (
       >
         <Tab.Screen
           name="Home"
-          component={ProductNavigator}
+          component={HomeNavigator}
           options={{
             tabBarLabel: "Home",
             tabBarIcon: ({ color }) => (
@@ -39,13 +40,27 @@ export const AppNavigator = () => (
           }}
         />
         <Tab.Screen
-          name="Try On"
-          component={TryOnView}
+          name="ProductsHome"
+          component={ProductNavigator}
           options={{
-            tabBarLabel: "Try On",
+            tabBarLabel: "NFT",
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons
-                name="camera-enhance-outline"
+                name="certificate-outline"
+                color={color}
+                size={26}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="ConfigurationHome"
+          component={ConfigurationNavigator}
+          options={{
+            tabBarLabel: "Configure",
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons
+                name="car-sports"
                 color={color}
                 size={26}
               />
@@ -56,7 +71,7 @@ export const AppNavigator = () => (
           name="Settings"
           component={SettingsView}
           options={{
-            tabBarLabel: "Settings",
+            tabBarLabel: "Profile",
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons
                 name="account-settings-outline"

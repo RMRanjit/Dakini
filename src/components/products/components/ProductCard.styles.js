@@ -13,4 +13,5 @@ export const Title = styled.Text`
 
 export const ProductCardLayout = styled(Card)`
   margin-bottom: 10px;
+  background-color: "#175851";
 `;

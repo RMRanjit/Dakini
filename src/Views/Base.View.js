@@ -7,16 +7,13 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
-import { ProductsContextProvider } from "../Services/Product/product.context";
-import { ProductView } from "./Products.View";
-import { SettingsView } from "./Settings.View";
-import { TryOnView } from "./TryOn.View";
 import { Navigation } from "../Common/Navigation";
 
 const Tab = createMaterialBottomTabNavigator();
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
+  color: #175851;
   ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}`};
 `;
 
@@ -32,10 +29,10 @@ const Listing = styled(View)`
 export const BaseView = () => {
   return (
     <>
-      <SafeArea>
-        <SearchContainer>
+      <SafeArea style={{ backgroundColor: "#175851" }}>
+        {/* <SearchContainer>
           <Searchbar />
-        </SearchContainer>
+        </SearchContainer> */}
         <Navigation />
       </SafeArea>
       <ExpoStatusBar style="auto" />

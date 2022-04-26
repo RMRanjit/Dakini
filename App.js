@@ -7,8 +7,8 @@ const theme = {
   roundness: 2,
   colors: {
     ...DefaultTheme.colors,
-    primary: "#3498db",
-    accent: "#f1c40f",
+    primary: "#175851",
+    accent: "#FFF056",
   },
 };
 
