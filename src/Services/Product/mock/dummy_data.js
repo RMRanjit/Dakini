@@ -32,7 +32,7 @@ export const products = [
     icon: "tshirt-v-outline",
     //photos: ["https://via.placeholder.com/300"],
     photos: require("../../../../assets/Pic3.jpeg"),
-    price: "$100",
+    price: "$124.49",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus mi eget bibendum facilisis. In interdum felis eget est bibendum.",
     rating: 5,
@@ -58,7 +58,7 @@ export const products = [
     icon: "infinity",
     //photos: ["https://via.placeholder.com/400"],
     photos: require("../../../../assets/Pic4.jpeg"),
-    price: "$100",
+    price: "$101.59",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus mi eget bibendum facilisis. In interdum felis eget est bibendum.",
     rating: 5,
@@ -97,7 +97,7 @@ export const products = [
     icon: "infinity",
     //photos: ["https://via.placeholder.com/400"],
     photos: require("../../../../assets/Pic4.jpeg"),
-    price: "$15",
+    price: "$14.99",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus mi eget bibendum facilisis. In interdum felis eget est bibendum.",
     rating: 5,
